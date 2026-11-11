@@ -133,6 +133,19 @@ laboratorio#5/
 
 ---
 
+## Resultados de la Experimentación con el Prompt de Sistema (Paso 9)
+
+Durante las pruebas del endpoint `POST /api/notas/:id/resumen`, se modificó el parámetro `system` enviado a Claude para evaluar cómo altera el formato y la síntesis de la respuesta:
+
+| Directiva en `system` | Comportamiento y Cambios Observados en la Respuesta |
+| :--- | :--- |
+| **`"Resume el texto en 3 viñetas breves, en español."`** *(Por defecto)* | El modelo responde con exactamente 3 líneas encabezadas con viñetas (`- `), condensando las ideas principales de forma esquemática y legible. |
+| **`"Resume el texto en una sola frase contundente."`** | El modelo omite las viñetas y genera un único párrafo de una sola oración que sintetiza el núcleo del contenido sin listas. |
+| **`"Extrae únicamente las palabras clave principales separadas por comas."`** | El modelo suprime conectores y prosa; devuelve únicamente una lista de términos técnicos clave (ej. *Arquitectura hexagonal, puertos, adaptadores, desacoplamiento*). |
+| **`"Traduce el contenido al inglés de manera concisa."`** | El modelo traduce la nota completa a inglés sin añadir comentarios introductorios, manteniendo la fidelidad del texto. |
+
+---
+
 ## Sección 6: Preguntas de Reflexión
 
 ### 1. ¿Por qué la API key no puede estar en el frontend? Describan cómo la podría obtener un usuario cualquiera.
