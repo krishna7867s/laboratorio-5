@@ -56,8 +56,8 @@ laboratorio#5/
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   cd laboratorio#5
+   git clone https://github.com/krishna7867s/laboratorio-5.git
+   cd laboratorio-5
    ```
 
 2. **Instalar dependencias**:
