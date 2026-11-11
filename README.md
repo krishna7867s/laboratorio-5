@@ -3,15 +3,16 @@
 ## Información del Proyecto
 - **Estudiante**: Desarrollador Backend (Modalidad Individual)
 - **Curso**: Programación Backend
-- **Tecnologías**: Node.js, Express 5, @anthropic-ai/sdk, Zod, Swagger (OpenAPI 3.0), Dotenv.
+- **Tecnologías**: Node.js, Express 5, DeepSeek (OpenAI SDK), @anthropic-ai/sdk, Zod, Swagger (OpenAPI 3.0), Dotenv.
 
 ---
 
 ## Descripción del Proyecto
-Esta API REST implementa la gestión en memoria de un recurso de **Notas** (CRUD completo) e integra la API oficial de **Anthropic Claude** para brindar capacidades de inteligencia artificial:
+Esta API REST implementa la gestión en memoria de un recurso de **Notas** (CRUD completo) e integra proveedores de inteligencia artificial con soporte dual (**DeepSeek** y **Anthropic Claude**) según la arquitectura explicada en la clase (*"Un servicio, dos proveedores"*):
 1. **Pregunta libre**: Endpoint para realizar consultas abiertas al modelo (`POST /api/ia/preguntar`).
 2. **Resumen de nota**: Endpoint para generar un resumen en 3 viñetas del contenido de una nota almacenada (`POST /api/notas/:id/resumen`).
-3. **Documentación Swagger UI**: Documentación interactiva completa bajo la especificación OpenAPI 3.0 en `/api-docs`.
+3. **Fábrica de Agentes**: Servicio modular `agent.service.js` capaz de instanciar agentes especializados (`createAgent`) con prompts de sistema específicos.
+4. **Documentación Swagger UI**: Documentación interactiva completa bajo la especificación OpenAPI 3.0 en `/api-docs`.
 
 ---
 
